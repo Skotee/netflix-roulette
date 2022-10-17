@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Headline() {
-  const greeting = 'Hello Function Component!';
+const Greeting = ({ name }) => { 
+	return React.createElement('h4', null, `Hello World, ${name}!`); 
+}; 
 
-  return <h3>{greeting}</h3>;
-}
+Greeting.propTypes = {
+	name: PropTypes.string
+};
 
-export default Headline;
+export default Greeting;
