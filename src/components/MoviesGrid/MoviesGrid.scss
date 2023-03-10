@@ -1,0 +1,45 @@
+.movieGrid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+/* align the items in the first column to the start */
+.movieGrid-container > :nth-child(3n+1) {
+  justify-self: start;
+}
+
+/* align the items in the second column to the center */
+.movieGrid-container > :nth-child(3n+2) {
+  justify-self: center;
+}
+
+/* align the items in the third column to the end */
+.movieGrid-container > :nth-child(3n+3) {
+  justify-self: end;
+}
+
+/* Define a media query to change the grid to two columns below 768 pixels */
+@media (max-width: 1024px) {
+  .movieGrid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movieGrid-container > :nth-child(2n+1) {
+    justify-self: start;
+  }
+
+  .movieGrid-container > :nth-child(2n+2) {
+    justify-self: end;
+  }
+}
+
+/* Define a media query to change the grid to two columns below 768 pixels */
+@media (max-width: 768px) {
+  .movieGrid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .movieGrid-container > :nth-child(n){
+    justify-self: center;
+  }
+}

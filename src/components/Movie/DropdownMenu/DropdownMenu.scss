@@ -1,0 +1,42 @@
+.dropdownMenuList{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  list-style-type: none;
+  line-height: 27px;
+  width: 190px;
+  background: #232323eb;
+  padding-bottom: 12px;
+  padding-left: 0px;
+
+  li{
+    padding-left: 15px;  
+  }
+
+  li:first-child{
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  li:hover:not(:first-child){
+    background-color: #F65261;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+}
+
+.closeIcon {
+  cursor: pointer;
+  transition: 1s linear; 
+  transition-duration: 4s;
+
+  &:hover{
+    width: 15px;
+    height: 15px;
+  }
+}

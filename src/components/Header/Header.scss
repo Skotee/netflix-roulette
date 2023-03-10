@@ -1,0 +1,35 @@
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 40px;
+}
+
+.findYourMovie{
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.backgroundImage{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/header-background.png');
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-position: left top;
+	background-color: #424242;
+	padding-bottom: 10em;
+}
+
+.searchSubContainer{
+	display: flex;
+}
+
+.searchMainContainer{
+	margin: 0 15vw;
+}
+
+@media (max-width: 768px) {
+	.searchSubContainer {
+	  flex-wrap: wrap;
+	}
+}

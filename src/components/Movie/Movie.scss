@@ -1,0 +1,37 @@
+.movieDetailsContainer{
+	display: flex;
+	justify-content: space-between;
+}
+
+.movieTitle{
+	font-size: 18px;
+}
+
+.movieYear{
+	border-width: 1px;
+	border-color: white;
+	border: 1px solid rgba(255, 255, 255, .2);
+	border-radius: 4px;
+	text-align: center;
+	width: 70px;
+	font-weight: 500;
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.movieGenres{
+	font-weight: 500;
+	font-size: 14px;
+	opacity: 50%;
+	margin-top: 0px;
+	margin-bottom: 3em;
+}
+
+.movieCoverWrapper{
+	position: relative;
+}
+
+.movieCover{
+	cursor: pointer;
+}

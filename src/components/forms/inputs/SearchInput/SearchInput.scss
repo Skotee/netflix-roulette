@@ -1,0 +1,21 @@
+#searchbar{
+	color: white;
+	padding: 9px;
+	padding-left: 19px;
+	background: rgba(50, 50, 50, 0.948044);
+	height: 20px;
+	mix-blend-mode: normal;
+	opacity: 0.8;
+	border-radius: 4px;
+	min-width: 20em;
+	width: 40em;
+	border: 0;
+	margin-right: 15px;
+	font-family: 'Montserrat';
+	font-size: 17px;
+	padding-bottom: 10px;
+}
+
+#searchbar:focus{
+	outline: none;
+}
