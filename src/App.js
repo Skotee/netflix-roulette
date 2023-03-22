@@ -21,7 +21,7 @@ class App extends Component {
 	render() {
 		return(
 		<ErrorBoundary>
-			<div className="mainContainer">
+			<div className="mainContainer" id="mainContainer">
 				<RouterProvider router={router} />
 			</div>
 		</ErrorBoundary>

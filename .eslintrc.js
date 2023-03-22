@@ -11,7 +11,8 @@ module.exports = {
 		"plugin:@typescript-eslint/recommended",
 		"airbnb",
 		"airbnb-typescript",
-		"prettier"
+		"prettier",
+		"react-hooks"
 	],
 	"ignorePatterns": ['.eslintrc.js'],
 	"overrides": [
@@ -29,5 +30,7 @@ module.exports = {
 	"rules": {
 		"@typescript-eslint/no-var-requires": 0,
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
 	}
 };
