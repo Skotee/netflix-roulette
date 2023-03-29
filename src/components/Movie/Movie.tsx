@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import IMovie from '../../interfaces/IMovie';
-import './Movie.scss';
 import { MovieMenu } from './MovieMenu/MovieMenu';
 import { DropdownMenu } from './DropdownMenu/DropdownMenu';
+import { CurrentMovieContext } from '../../context/currentMovie.context';
 import defImg from "../../../public/placeholder.png";
+
+import './Movie.scss';
 
 interface MovieProps {
 	movie: IMovie;
@@ -12,15 +14,13 @@ interface MovieProps {
 export const Movie = ({movie}: MovieProps) => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [isOpenDropdownMenu, setIsOpenDropdownMenu] = useState(false);
-
+	const {currentMovie, setCurrentMovie} = useContext(CurrentMovieContext)
 
 	const handleOpenMovieMenu = () => {
-    console.log('handleOpenMovieMenu');
 		setIsOpenDropdownMenu(!isOpenDropdownMenu)
   }
 
 	const handleCloseDropdownMenu = () => {
-		console.log('handleCloseDropdownMenu');
 		setIsOpenDropdownMenu(false);
 	};
 	
@@ -32,6 +32,7 @@ export const Movie = ({movie}: MovieProps) => {
 		>
 			<img 
 				className='movieCover'
+				onClick={() => setCurrentMovie(movie)}
 				src={movie.cover} 
 				alt={movie.title}
 				onError={(e) => {
