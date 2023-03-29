@@ -2,11 +2,12 @@ import React from 'react';
 import './OutlinedButton.scss';
 
 export type ButtonProps = {
-  children: string
+  children: React.ReactNode,
+	onClick: React.MouseEventHandler<HTMLElement>;
 };
 
-export const OutlinedButton = ({children}:ButtonProps) => {
+export const OutlinedButton = ({children, onClick}:ButtonProps) => {
 	return (
-		<button className="outline effect">{children}</button>
+		<button className="outlined" onClick={onClick}>{children}</button>
 	)
 }

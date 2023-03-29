@@ -10,7 +10,6 @@ export type MoviesGridProps = {
 export const MoviesGrid = ({ 
     movieList 
 }: MoviesGridProps) => {
-  
   return (
     <div className="movieGrid-container">
       {movieList.map((movie) => (

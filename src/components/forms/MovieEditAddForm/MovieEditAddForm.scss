@@ -1,0 +1,64 @@
+.formGridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 23px;
+
+  label{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: 0.9px;
+    color: #F65261;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+
+  input, select{
+    height: 30px;
+  }
+
+  input, #overview, select{
+    color: white;
+    background: rgba(50, 50, 50, 0.95);
+    border: none;
+    padding-left: 10px;
+  }
+
+  input[type='date']{
+    padding-right: 10px;
+  }
+
+  #overview {
+    padding-top: 10px;
+    resize: none;
+    width: 100%;
+  }
+}
+
+.firstColumn { 
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+.secondColumn { 
+  grid-area: 1 / 3 / 4 / 4; 
+
+}
+.overviewContainer { 
+  margin-top: 20px;
+  grid-area: 4 / 1 / 5 / 4;    
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  & > div{
+    display: flex;
+    flex-direction: column;
+  }
+}

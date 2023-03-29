@@ -2,11 +2,12 @@ import React from 'react';
 import "./BlurredButton.scss";
 
 export type ButtonProps = {
-  children: string
+  children: string;
+	onClick: React.MouseEventHandler<HTMLElement>;
 };
 
-export const BlurredButton = ({children}: ButtonProps) => {
+export const BlurredButton = ({ children, onClick }: ButtonProps) => {
 	return (
-		<button className="blurred">{children}</button>
+		<button className="blurred" onClick={onClick}>{children}</button>
 	)
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CategoriesBar } from "../../components/CategoriesBar/CategoriesBar";
 import { Header } from "../../components/Header/Header";
 import { Logo } from "../../components/Logo/Logo";
@@ -14,8 +14,15 @@ export const Home = () => {
   // const [isLoading, setIsLoading] = useState(false);
   // const [isError, setIsError] = useState(false);
 
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+
   const movies = data as IMovie[];
 
+  useEffect(() => {
+    console.log("use effect is triggered");
+  }, []);
+  
   return (
     <>
       <Header />
