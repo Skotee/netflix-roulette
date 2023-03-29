@@ -4,7 +4,7 @@ interface IMovie {
   year: number,
   cover: string,
   id: number,
-  rate: 8.9,
+  rate: number,
   overview: string,
   runtime: string
 }
