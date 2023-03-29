@@ -1,0 +1,38 @@
+.circle {
+	position: absolute;
+	cursor: pointer;
+	top: 14px;
+	right: 14px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.774);
+}
+  
+.dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: white;
+}
+  
+.dot:nth-child(1) {
+	top: 25%;
+}
+  
+.dot:nth-child(2) {
+	top: 50%;
+}
+  
+.dot:nth-child(3) {
+	top: 75%;
+}
+
+.circle:hover {
+	background-color: rgba(161, 160, 160, 0.774);
+}
+

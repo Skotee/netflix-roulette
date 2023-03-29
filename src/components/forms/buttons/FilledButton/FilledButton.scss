@@ -1,0 +1,27 @@
+button {
+    cursor: pointer;
+    outline: none;
+      &.filled {
+        font-weight: 500;
+        position: relative;
+        color: white;
+        border-color: #F65261;
+        background: #F65261;
+        z-index: 3;
+        font-size: 14px;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 4px;
+        padding: 10px 40px;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+        a {
+            text-decoration: none;
+        }
+      }
+      &.filled:hover {
+          color: white;
+          transition: all 0.2s linear;
+          border-color: white;
+      }
+    }

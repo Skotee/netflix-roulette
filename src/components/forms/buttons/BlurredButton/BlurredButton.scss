@@ -1,0 +1,27 @@
+button {
+    cursor: pointer;
+    outline: none;
+    font-family: "Montserrat";
+      &.blurred {
+        font-weight: 600;
+        position: relative;
+        color: #F65261;
+        border-color: transparent;
+        background: rgba(96, 96, 96, 0.68);
+        z-index: 3;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 10px 40px;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+        a {
+            text-decoration: none;
+        }
+      }
+      &.blurred:hover {
+          color: white;
+          background: #F65261;
+          transition: all 0.2s linear;
+        //   border-color: white;
+      }
+}

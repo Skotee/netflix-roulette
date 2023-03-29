@@ -1,26 +1,32 @@
-import { React } from 'react';
-import './App.css';
-import Greeting from './Greeting/Greeting';
-import SecondCounter from './SecondCounter/SecondCounter';
-import Counter from './Counter/Counter';
-import Count from './Count/Count';
+import React, { Component } from "react";
+import {
+	createBrowserRouter,
+	RouterProvider,
+} from "react-router-dom"
+import { Home } from "./pages/Home/Home";
+import ErrorBoundary from "./ErrorBoundary";
+import './App.scss'
 
-function App() {
-	return (
-		<div className="App">
-			<h1>React.createElement</h1>
-			<Greeting name={'Andrzej'} />
-			<br></br>
-			<h1>React.Component</h1>
-			<Counter />
-			<br></br>
-			<h1>React.PureComponent</h1>
-			<Count />
-			<br></br>
-			<h1>Functional component</h1>
-			<SecondCounter/>
-		</div>
-	);
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Home />,
+	},
+	{
+		path: "/home",
+		element: <Home />,
+	},
+  ]);
+class App extends Component {
+	render() {
+		return(
+		<ErrorBoundary>
+			<div className="mainContainer">
+				<RouterProvider router={router} />
+			</div>
+		</ErrorBoundary>
+		);
+	}
 }
 
 export default App;
